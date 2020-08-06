@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "fd2b956b-51d3-4654-bbe2-0cee61ce08b3",
+		"name": "JSON API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Query All Contracts",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f6c91ac2-b160-448f-84b0-25504e346674",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{jsonApiHost}}:{{jsonApiPort}}/v1/query",
+					"protocol": "http",
+					"host": [
+						"{{jsonApiHost}}"
+					],
+					"port": "{{jsonApiPort}}",
+					"path": [
+						"v1",
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query Contracts",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "fc81e321-e34e-4b14-af1e-df70f173d654",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"templateIds\": [],\n    \"query\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{jsonApiHost}}:{{jsonApiPort}}/v1/query",
+					"protocol": "http",
+					"host": [
+						"{{jsonApiHost}}"
+					],
+					"port": "{{jsonApiPort}}",
+					"path": [
+						"v1",
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Contract",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "efce9857-8b4d-4656-b1fa-d1b5e2b71efa",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"templateId\": \"\",\n    \"payload\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{jsonApiHost}}:{{jsonApiPort}}/v1/create",
+					"protocol": "http",
+					"host": [
+						"{{jsonApiHost}}"
+					],
+					"port": "{{jsonApiPort}}",
+					"path": [
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Contract",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "43eb5dd8-1ade-4065-bfb7-827fb90800e5",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contractId\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{jsonApiHost}}:{{jsonApiPort}}/v1/fetch",
+					"protocol": "http",
+					"host": [
+						"{{jsonApiHost}}"
+					],
+					"port": "{{jsonApiPort}}",
+					"path": [
+						"v1",
+						"fetch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Contract by Key",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "881ebc26-e16c-4af9-ab89-666a4b15590a",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"templateId\": \"\",\n    \"key\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{jsonApiHost}}:{{jsonApiPort}}/v1/fetch",
+					"protocol": "http",
+					"host": [
+						"{{jsonApiHost}}"
+					],
+					"port": "{{jsonApiPort}}",
+					"path": [
+						"v1",
+						"fetch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercise",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "eb5b5a77-69a9-4166-ac68-485c96ae7e39",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"templateId\": \"\",\n    \"contractId\": \"\",\n    \"choice\": \"\",\n    \"argument\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{jsonApiHost}}:{{jsonApiPort}}/v1/exercise",
+					"protocol": "http",
+					"host": [
+						"{{jsonApiHost}}"
+					],
+					"port": "{{jsonApiPort}}",
+					"path": [
+						"v1",
+						"exercise"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercise by Key",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e446eb1d-4803-4d7e-8fb3-19e115236d2c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"templateId\": \"\",\n    \"key\": \"\",\n    \"choice\": \"\",\n    \"argument\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{jsonApiHost}}:{{jsonApiPort}}/v1/exercise",
+					"protocol": "http",
+					"host": [
+						"{{jsonApiHost}}"
+					],
+					"port": "{{jsonApiPort}}",
+					"path": [
+						"v1",
+						"exercise"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{jwtToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "eee31afb-059f-4a9d-b80b-af8604645260",
+				"type": "text/javascript",
+				"exec": [
+					"// Based on:",
+					"// https://gist.github.com/corbanb/db03150abbe899285d6a86cc480f674d",
+					"",
+					"function env(key, value) {",
+					"  if (value) {",
+					"    pm.environment.set(key, value);",
+					"  }",
+					"  return pm.environment.get(key);",
+					"}",
+					"",
+					"function log(message) {",
+					"  const logEnabled = env(\"logEnabled\") || false;",
+					"  if (logEnabled) {",
+					"    console.log(message);",
+					"  }",
+					"}",
+					"",
+					"function base64UrlEncode(source) {",
+					"    // Needed to avoid error: 'r.clamp is not a function'.",
+					"    // See: https://stackoverflow.com/questions/51239747/cryptojs-key-clamp-is-not-a-function",
+					"    const utf8Source = CryptoJS.enc.Utf8.parse(source);",
+					"    return CryptoJS.enc.Base64",
+					"      .stringify(utf8Source)",
+					"      .replace(/=+$/, '')",
+					"      .replace(/\\+/g, '-')",
+					"      .replace(/\\//g, '_');",
+					"}",
+					"",
+					"function isTokenOutdated(values, usedValues) {",
+					"  log(\"Comparing token values:\");",
+					"  log(`Used: ${JSON.stringify(usedValues)}`);",
+					"  log(`Current: ${JSON.stringify(values)}`);",
+					"  return !usedValues ||",
+					"        !(values.ledgerId == usedValues.ledgerId",
+					"      && values.applicationId == usedValues.applicationId",
+					"      && values.party == usedValues.party",
+					"      && values.secret == usedValues.secret);",
+					"}",
+					"",
+					"const header = {",
+					"  \"alg\": \"HS256\",",
+					"  \"typ\": \"JWT\"",
+					"};",
+					"",
+					"function jwtToken(tokenValues) {",
+					"  const payload = {",
+					"    \"https://daml.com/ledger-api\": {",
+					"      \"ledgerId\": tokenValues.ledgerId,",
+					"      \"applicationId\": tokenValues.applicationId,",
+					"      \"actAs\": [tokenValues.party]",
+					"    }",
+					"  };",
+					"  const encodedHeader = base64UrlEncode(JSON.stringify(header));",
+					"  const encodedPayload = base64UrlEncode(JSON.stringify(payload));",
+					"  const token = `${encodedHeader}.${encodedPayload}`;",
+					"  const signature = CryptoJS.HmacSHA256(token, tokenValues.secret);",
+					"  return `${token}.${signature}`;",
+					"}",
+					"",
+					"const ledgerId = env(\"ledgerId\");",
+					"const applicationId = env(\"applicationId\");",
+					"const party = env(\"party\");",
+					"const secret = env(\"secret\");",
+					"",
+					"const tokenValues = { ledgerId, applicationId, party, secret };",
+					"const usedTokenValues = env(\"usedTokenValues\");",
+					"",
+					"let token = env(\"jwtToken\");",
+					"if (isTokenOutdated(tokenValues, usedTokenValues)) {",
+					"  log(`Token values have changed, regenerating token using values: ${JSON.stringify(tokenValues)}`);",
+					"  token = jwtToken(tokenValues);",
+					"  env(\"jwtToken\", token);",
+					"  env(\"usedTokenValues\", tokenValues);",
+					"} else {",
+					"  log(\"Token value are unchanged, no need to regenerate.\");",
+					"}",
+					"",
+					"log(`Using token: '${token}'.`);",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8ee92a93-fc7f-4791-adaa-3f53ada26d38",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
